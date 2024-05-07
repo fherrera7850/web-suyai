@@ -8,19 +8,20 @@ export default function PrincipalSlider() {
             {/* <div style={{ backgroundColor: 'red', height: '200px', width: '400px' }}>hola</div> */}
             <Carousel controls={false} indicators={false} interval={7000}>
                 <Carousel.Item>
-                    <div className="container ">
+                    <div className="container">
                         <div className="row">
                             <div className="col-md-7 col-lg-6 ">
-                                <div className="detail-box">
+                                <div>
                                     <h1 style={{ color: 'white' }}>
-                                        Agua Purificada Suyai 1
+                                        Agua Purificada de calidad Premium
                                     </h1>
-                                    <p>
-                                        Refresca tu día con agua pura y limpia. Entrega rápida y segura directamente a tu puerta. ¡Hidrátate Suyai!
+                                    <p style={{ color: 'white' }}>
+                                        Refresca tu día con agua pura y limpia. <br /><br />
+                                        Nos preocupamos por tu salud y te llevamos un producto seguro y de calidad, cumpliendo todos los esatándares dictados por los organismos sanitarios de Chile.
                                     </p>
-                                    <Link className="order_online" to="/">
-                                        Pide Online
-                                    </Link>
+                                    <button className='btnCarrousel'>
+                                        Haz tu pedido ahora
+                                    </button>
                                 </div>
 
                             </div>
@@ -35,16 +36,15 @@ export default function PrincipalSlider() {
                             <div className="col-md-7 col-lg-6 ">
                                 <div className="detail-box">
                                     <h1 style={{ color: 'white' }}>
-                                        Agua Purificada Suyai 2
+                                        Área de Reparto
                                     </h1>
-                                    <p>
-                                        Refresca tu día con agua pura y limpia. Entrega rápida y segura directamente a tu puerta. ¡Hidrátate Suyai!
+                                    <p style={{ color: 'white' }}>
+                                        San Bernardo<br />El Bosque<br />La Cisterna<br />Lo Espejo<br />Pedro Aguirre Cerda<br />San Miguel<br /><br />
+                                        Si eres de estas comunas, no dudes en contactarnos!
                                     </p>
-                                    <div className="btn-box">
-                                        <Link to="/" className="btn1">
-                                            Haz tu pedido ahora
-                                        </Link>
-                                    </div>
+                                    <button className='btnCarrousel'>
+                                        Haz tu pedido ahora
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -57,16 +57,15 @@ export default function PrincipalSlider() {
                             <div className="col-md-7 col-lg-6 ">
                                 <div className="detail-box">
                                     <h1 style={{ color: 'white' }}>
-                                        Agua Purificada Suyai 3
+                                        Despacho Express
                                     </h1>
-                                    <p>
-                                        Refresca tu día con agua pura y limpia. Entrega rápida y segura directamente a tu puerta. ¡Hidrátate Suyai!
+                                    <p style={{ color: 'white' }}>
+                                        Atendemos de Lunes a Sábado, haz tu pedido antes de las 12:00 y recibe tu pedido el mismo día.<br />
+                                        Trasladamos tus productos de manera rápida y segura.
                                     </p>
-                                    <div className="btn-box">
-                                        <Link to="/" className="btn1">
-                                            Haz tu pedido ahora
-                                        </Link>
-                                    </div>
+                                    <button className='btnCarrousel'>
+                                        Haz tu pedido ahora
+                                    </button>
                                 </div>
                             </div>
                         </div>

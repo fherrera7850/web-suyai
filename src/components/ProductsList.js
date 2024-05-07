@@ -25,7 +25,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f1.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -50,7 +50,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f2.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -75,7 +75,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f3.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -100,7 +100,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f4.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -125,7 +125,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f5.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -150,7 +150,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f6.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -175,7 +175,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f7.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -200,7 +200,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f8.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>
@@ -225,7 +225,7 @@ export default function ProductsList() {
                             <div className="box">
                                 <div>
                                     <div className="img-box">
-                                        <img src={require("./../assets/images/f9.png")} alt="" />
+                                        <img src={require("./../assets/images/20lts_v1.png")} alt="" />
                                     </div>
                                     <div className="detail-box">
                                         <h5>

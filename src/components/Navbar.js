@@ -8,7 +8,7 @@ export default function Navbar() {
     <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container ">
             <Link className="navbar-brand" to="/">
-                <span>Suyai</span>
+                <span>Agua Suyai</span>
             </Link>
 
 
