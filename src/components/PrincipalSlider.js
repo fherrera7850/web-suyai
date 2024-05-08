@@ -4,75 +4,83 @@ import { Link } from 'react-router-dom';
 
 export default function PrincipalSlider() {
     return (
-        <div style={{ width: '70%', justifyContent: 'center', marginLeft: 150, marginTop: 250 }}>
-            {/* <div style={{ backgroundColor: 'red', height: '200px', width: '400px' }}>hola</div> */}
-            <Carousel controls={false} indicators={false} interval={7000}>
-                <Carousel.Item>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-7 col-lg-6 ">
-                                <div>
-                                    <h1 style={{ color: 'white' }}>
-                                        Agua Purificada de calidad Premium
-                                    </h1>
-                                    <p style={{ color: 'white' }}>
-                                        Refresca tu día con agua pura y limpia. <br /><br />
+        <section className="slider_section ">
+      <div id="customCarousel1" className="carousel slide" data-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="container ">
+              <div className="row">
+                <div className="col-md-7 col-lg-6 ">
+                  <div className="detail-box">
+                    <h1>
+                    Agua Purificada de calidad Premium
+                    </h1>
+                    <p>
+                    Refresca tu día con agua pura y limpia. <br /><br />
                                         Nos preocupamos por tu salud y te llevamos un producto seguro y de calidad, cumpliendo todos los esatándares dictados por los organismos sanitarios de Chile.
-                                    </p>
-                                    <button className='btnCarrousel'>
-                                        Haz tu pedido ahora
-                                    </button>
-                                </div>
-
-                            </div>
-
-                        </div>
+                    </p>
+                    <div className="btn-box">
+                      <Link to="/" className="btn1">
+                        Order Now
+                      </Link>
                     </div>
-
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="container ">
-                        <div className="row">
-                            <div className="col-md-7 col-lg-6 ">
-                                <div className="detail-box">
-                                    <h1 style={{ color: 'white' }}>
-                                        Área de Reparto
-                                    </h1>
-                                    <p style={{ color: 'white' }}>
-                                        San Bernardo<br />El Bosque<br />La Cisterna<br />Lo Espejo<br />Pedro Aguirre Cerda<br />San Miguel<br /><br />
-                                        Si eres de estas comunas, no dudes en contactarnos!
-                                    </p>
-                                    <button className='btnCarrousel'>
-                                        Haz tu pedido ahora
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item ">
+            <div className="container ">
+              <div className="row">
+                <div className="col-md-7 col-lg-6 ">
+                  <div className="detail-box">
+                    <h1>
+                      Fast Food Restaurant
+                    </h1>
+                    <p>
+                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                    </p>
+                    <div className="btn-box">
+                      <Link to="/" className="btn1">
+                        Order Now
+                      </Link>
                     </div>
-
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="container ">
-                        <div className="row">
-                            <div className="col-md-7 col-lg-6 ">
-                                <div className="detail-box">
-                                    <h1 style={{ color: 'white' }}>
-                                        Despacho Express
-                                    </h1>
-                                    <p style={{ color: 'white' }}>
-                                        Atendemos de Lunes a Sábado, haz tu pedido antes de las 12:00 y recibe tu pedido el mismo día.<br />
-                                        Trasladamos tus productos de manera rápida y segura.
-                                    </p>
-                                    <button className='btnCarrousel'>
-                                        Haz tu pedido ahora
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="container ">
+              <div className="row">
+                <div className="col-md-7 col-lg-6 ">
+                  <div className="detail-box">
+                    <h1>
+                      Fast Food Restaurant
+                    </h1>
+                    <p>
+                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                    </p>
+                    <div className="btn-box">
+                      <Link to="/" className="btn1">
+                        Order Now
+                      </Link>
                     </div>
-
-                </Carousel.Item>
-            </Carousel>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div className="container">
+          <ol className="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" className="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
     )
 }

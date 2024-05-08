@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import PrincipalSlider from '../components/PrincipalSlider';
-import ProductsList from '../components/Products/ProductsSection';
+import ProductsSection from '../components/Products/ProductsSection';
 import AboutSection from '../components/AboutSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
@@ -20,7 +20,7 @@ export default function Home() {
                 <PrincipalSlider />
             </div>
 
-            <ProductsList />
+            <ProductsSection />
 
             <AboutSection />
 
