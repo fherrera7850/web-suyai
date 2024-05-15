@@ -1054,3 +1054,29 @@ a:focus {
   padding: 15px;
   border-radius: 20px;
 }
+
+.modal-footer .ingresar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-footer .ingresar button {
+  display: inline-block;
+  padding: 10px 55px;
+  background-color: #97CFC0 ;
+  color: #ffffff;
+  border-radius: 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  width: 100%;
+}
+
+.modal-footer .ingresar button:hover {
+  background-color: #0373B1; /*  */
+}
