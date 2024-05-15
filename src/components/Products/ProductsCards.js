@@ -7,7 +7,7 @@ function ProductGrid() {
         {
             id: 1,
             category: "dbasicos",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Delicious Pizza",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$20"
@@ -15,7 +15,7 @@ function ProductGrid() {
         {
             id: 2,
             category: "bidones",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Delicious Burger",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$15"
@@ -23,7 +23,7 @@ function ProductGrid() {
         {
             id: 3,
             category: "dbasicos",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Delicious Pizza",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$17"
@@ -31,7 +31,7 @@ function ProductGrid() {
         {
             id: 4,
             category: "dpremium",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Delicious Pasta",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$18"
@@ -39,7 +39,7 @@ function ProductGrid() {
         {
             id: 5,
             category: "accesorios",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "French Fries",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$10"
@@ -47,7 +47,7 @@ function ProductGrid() {
         {
             id: 6,
             category: "dbasicos",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Delicious Pizza",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$15"
@@ -55,7 +55,7 @@ function ProductGrid() {
         {
             id: 7,
             category: "bidones",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Tasty Burger",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$12"
@@ -63,7 +63,7 @@ function ProductGrid() {
         {
             id: 8,
             category: "bidones",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Tasty Burger",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$14"
@@ -71,7 +71,7 @@ function ProductGrid() {
         {
             id: 9,
             category: "dpremium",
-            image: "./../../assets/images/20lts_v1.png",
+            image: "20lts_v1.png",
             title: "Delicious Pasta",
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$10"
@@ -86,7 +86,7 @@ function ProductGrid() {
                     <div className="box">
                         <div>
                             <div className="img-box">
-                                <img src={require("./../../assets/images/20lts_v1.png")} alt={product.title} />
+                                <img src={require("./../../assets/images/productsImages/" + product.image)} alt={product.title} />
                             </div>
                             <div className="detail-box">
                                 <h5>{product.title}</h5>
