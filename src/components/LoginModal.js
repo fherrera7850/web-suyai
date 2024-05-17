@@ -21,7 +21,7 @@ function LoginModal({ show, handleClose }) {
         if (validateForm()) {
             try {
                 const response = await login(email, password);
-                console.log(response.message);
+                console.log("handleLogin loginmodal", response);
                 handleClose();
             } catch (error) {
                 alert(error.message); // Muestra mensaje de error
