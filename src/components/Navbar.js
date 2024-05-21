@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import LoginModal from './LoginModal';
+import { useAuth } from './../context/AuthContext';
 
 export default function Navbar() {
 
@@ -9,6 +10,9 @@ export default function Navbar() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    //Auth Context
+    const { isAuthenticated, logoutCtx } = useAuth();
 
     return (
 
@@ -102,12 +106,16 @@ export default function Navbar() {
                                     <i className="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
-                            {/* <Link className="order_online" to="/">
-                                Acceso Usuario
-                            </Link> */}
-                            <Button className="order_online" onClick={handleShow}>
-                                Acceso
-                            </Button>
+                            {isAuthenticated ? (
+                                <Button className="order_online" onClick={() => logoutCtx()}>
+                                    Cerrar Sesión
+                                </Button>
+                            ) : (
+                                <Button className="order_online" onClick={handleShow}>
+                                    Acceso
+                                </Button>
+                            )}
+
                             <LoginModal show={show} handleClose={handleClose} />
                         </div>
                     </div>

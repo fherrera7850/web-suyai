@@ -1,13 +1,14 @@
 import { fetchData } from "./Requests";
 
 const login = async (email, password) => {
-    const url = 'http://localhost:5000/signin';
+    const methodUrl = 'signin';
     const body = { email, password };
-
+    
     try {
-        const result = await fetchData({ url, body });
+        const result = await fetchData({ methodUrl, body });
         if (result.ok) {
             console.log('Login successful:', result.data);
+            localStorage.setItem('userSession', JSON.stringify(result.data.user));
             return result; // Retorno apropiado del resultado
         } else {
             // Lanza un error con un mensaje detallado

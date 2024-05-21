@@ -1,4 +1,4 @@
-export const fetchData = async ({ url, method = 'POST', body, headers = {} }) => {
+export const fetchData = async ({ methodUrl, method = 'POST', body, headers = {} }) => {
     const defaultHeaders = {
         'Content-Type': 'application/json',
     };
@@ -10,6 +10,7 @@ export const fetchData = async ({ url, method = 'POST', body, headers = {} }) =>
     };
 
     try {
+        const url = process.env.REACT_APP_API_URL + methodUrl
         const response = await fetch(url, config);
         if (!response.ok) return {
             status: response.status, // Devuelve el código de estado HTTP
@@ -26,12 +27,6 @@ export const fetchData = async ({ url, method = 'POST', body, headers = {} }) =>
             message: response.statusText
         };
     } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error)
-        // Asegúrate de definir 'response' o manejar su ausencia correctamente
-        /* return {
-            status: error.response ? error.response.status : 500, // Usa el estado de la respuesta si está disponible
-            message: error.message,
-            ok: false
-        }; */
+        console.log("🚀 ~ fetchData ~ error:", error.message)
     }
 };
