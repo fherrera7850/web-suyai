@@ -1,32 +1,48 @@
 export const fetchData = async ({ methodUrl, method = 'POST', body, headers = {} }) => {
-    const defaultHeaders = {
-        'Content-Type': 'application/json',
-    };
+    const defaultHeaders = {};
+
+    // Añadir 'Content-Type' solo para métodos que envían datos en el cuerpo
+    if (method === 'POST' || method === 'PUT') {
+        defaultHeaders['Content-Type'] = 'application/json';
+    }
 
     const config = {
         method: method,
         headers: { ...defaultHeaders, ...headers },
-        body: JSON.stringify(body),
+        credentials: 'include'  // Asegúrate de que las cookies sean enviadas con la solicitud
     };
 
+    // Solo añadir body si el método es POST o PUT
+    if (method === 'POST' || method === 'PUT') {
+        config.body = JSON.stringify(body);
+    }
+
     try {
-        const url = process.env.REACT_APP_API_URL + methodUrl
+        const url = process.env.REACT_APP_API_URL + methodUrl;
         const response = await fetch(url, config);
-        if (!response.ok) return {
-            status: response.status, // Devuelve el código de estado HTTP
-            data: null, // Devuelve los datos de la respuestaf
-            ok: false,
-            message: response.statusText
-        };
-        
+        if (!response.ok) {
+            return {
+                status: response.status,
+                data: null,
+                ok: false,
+                message: response.statusText
+            };
+        }
+
         const data = await response.json(); // Parsea la respuesta como JSON
         return {
-            status: response.status, // Devuelve el código de estado HTTP
-            data: data, // Devuelve los datos de la respuesta
+            status: response.status,
+            data: data,
             ok: response.ok,
             message: response.statusText
         };
     } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error.message)
+        console.log("🚀 ~ fetchData ~ error:", error.message);
+        return {
+            status: 500,
+            data: null,
+            ok: false,
+            message: "Internal Server Error"
+        };
     }
 };

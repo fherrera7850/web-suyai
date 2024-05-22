@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import loginUser from '../services/LoginRegister';
+import { login } from '../services/LoginRegister';
 import './../css/google-sign-in.css'
 import { useAuth } from '../context/AuthContext';
 
@@ -22,13 +22,13 @@ function LoginModal({ show, handleClose }) {
     const handleLogin = async () => {
         if (validateForm()) {
             try {
-                const response = await loginUser(email, password);
+                const response = await login(email, password);
                 if (response.status === 200) {
                     loginCtx(); //Login en el context
                     console.log("handleLogin loginmodal", response);
                     handleClose();
                 }
-                else{
+                else {
                     alert(response.message);
                 }
 

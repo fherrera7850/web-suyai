@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import getAllProducts from "./../../services/Products";
 
 function ProductGrid() {
 
-    const products =[
+    /* const products =[
         {
             id: 1,
             category: "dbasicos",
@@ -76,20 +77,38 @@ function ProductGrid() {
             description: "Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque",
             price: "$10"
         }
-    ]
-    
+    ] */
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await getAllProducts();
+                console.log("🚀 ~ fetchProducts ~ response:", response)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok:', response.status);
+                }
+                setProducts(response.data); // Suponiendo que la API devuelve un array de productos
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
 
     return (
         <div className="row grid">
             {products.map(product => (
-                <div key={product.id} className={`col-sm-6 col-lg-4 all ${product.category}`}>
+                <div key={product._id} className={`col-sm-6 col-lg-4 all ${product.category}`}>
                     <div className="box">
                         <div>
                             <div className="img-box">
-                                <img src={require("./../../assets/images/productsImages/" + product.image)} alt={product.title} />
+                                <img src={require("./../../assets/images/productsImages/" + product.imageUrl)} alt={product.name} />
                             </div>
                             <div className="detail-box">
-                                <h5>{product.title}</h5>
+                                <h5>{product.name}</h5>
                                 <p>{product.description}</p>
                                 <div className="options">
                                     <h6>{product.price}</h6>
